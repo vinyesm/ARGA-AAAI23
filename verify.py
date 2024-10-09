@@ -107,6 +107,9 @@ if __name__ == "__main__":
     apply_call = solution['apply_call']
     tries = [verify(gi, abstraction, apply_call) for gi in ins]
 
+    # check if we have correct outputs
+    print(f"checking if is solution correct: {outs == tries[0:len(outs)]}")
+
     plot_task(ins, outs, tries, f"{key}")
 
 ## to test on a single grid do:
